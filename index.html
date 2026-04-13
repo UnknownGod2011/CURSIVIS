@@ -1,468 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cursivis — One Pager</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursivis - The Pitch</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <section class="pitch-section">
+            <h1 class="main-title">The Pitch</h1>
+            <p class="subtitle">Please watch till the end, it's worth it!</p>
+            
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/X0umA5t0hl0" 
+                    title="Cursivis Pitch Video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
 
-<div class="page-shell">
+        <section class="audio-section">
+            <h2>Audio Pitch:</h2>
+            <div class="audio-container">
+                <audio controls>
+                    <source src="Cursivis-ByUnknownGod.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </section>
 
-  <!-- ── HERO ── -->
-  <section class="hero">
-    <div class="hero-heading">
-      <p class="eyebrow">Logitech Actions SDK · Submission One-Pager</p>
-      <h1>Cursivis</h1>
-      <p class="hero-subtitle">Cursor-native intelligence for Logitech MX hardware</p>
-      <p class="hero-summary">
-        Turns live on-screen selection into the right next step — from summaries and translations
-        to real browser execution — without breaking flow.
-      </p>
+        <section class="text-section">
+            <h2>Text Pitch:</h2>
+            <div class="text-content">
+                <p>Cursivis addresses a practical problem in modern workflows: even with powerful AI tools, users still lose time and focus switching applications, typing prompts, and manually applying results. This friction is especially visible in professional environments where users already rely heavily on the mouse for precision and speed.</p>
+                
+                <p>Cursivis is a context-aware plugin built for the Logitech MX ecosystem that allows users to act directly on what they select on screen using a deliberate hardware trigger. When a user selects text, code, an image, or a visual element and presses an MX control, Cursivis analyzes both the selected content and the application context, then performs the most relevant action automatically.</p>
+                
+                <p>For example, selecting code in an editor triggers bug analysis and prepares a clean fix; selecting a long report generates a concise summary; selecting foreign-language text produces an instant translation; selecting an email draft improves clarity and tone; and hovering over a design color reveals exact HEX or RGB values. The same trigger works across applications, but the result changes based on context.</p>
+                
+                <p>If the user wants a different outcome, holding the MX trigger reveals a small set of context-aware options through an Actions Ring, allowing refinement without leaving the current workflow. This interaction is fast, consistent, and requires no prompt writing or mode switching.</p>
+                
+                <p>By combining precise pointing with intentional hardware input and the Actions SDK, Cursivis delivers immediate, visible value while remaining realistic to implement and scale. It fits naturally into Logitech's professional ecosystem and demonstrates how hardware and software can work together to reduce friction and improve productivity in everyday workflows.</p>
+            </div>
+        </section>
     </div>
-
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p>
-          Cursivis removes prompt friction from modern work. Instead of opening a chatbot, writing
-          instructions, and switching between apps, the user selects what matters and triggers
-          Cursivis through MX Master 4, MX Creative Console, or the Actions Ring.
-        </p>
-        <p>
-          The system understands the current context, returns the intended result, and can carry
-          that result forward into the live browser workflow. The interaction stays simple.
-          The intelligence adapts to context.
-        </p>
-        <div class="hero-meta" aria-label="Core platforms">
-          <span>MX Master 4</span>
-          <span>MX Creative Console</span>
-          <span>Actions Ring</span>
-          <span>Take Action</span>
-          <span>Multimodal</span>
-        </div>
-      </div>
-
-      <div class="card hero-visual">
-        <div class="hero-visual-placeholder">
-          <div class="orb"></div>
-          <p>Cursor-native AI · MX Ecosystem</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 01 INTERACTION MODEL ── -->
-  <section class="section reveal">
-    <div class="section-head compact">
-      <span class="section-index">01</span>
-      <div>
-        <p class="section-kicker">Core Interaction Model</p>
-        <h2>Selection + Trigger + Context = Action</h2>
-      </div>
-    </div>
-
-    <div class="interaction-card">
-      <p class="interaction-copy">
-        Cursivis begins with the thing the user is already working on. The selection carries the
-        context, Logitech hardware expresses intent, and the system returns the most relevant next
-        step without breaking flow.
-      </p>
-      <div class="interaction-flow" aria-label="Core interaction flow">
-        <span>Select</span>
-        <span>Trigger</span>
-        <span>Understand</span>
-        <span>Generate</span>
-        <span>Execute</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 02 WHAT CURSIVIS CHANGES ── -->
-  <section class="section reveal">
-    <div class="section-head">
-      <span class="section-index">02</span>
-      <div>
-        <p class="section-kicker">Interaction Shift</p>
-        <h2>What Cursivis Changes</h2>
-        <p class="section-intro">AI usually begins with a blank box. Cursivis begins with what the user has already selected.</p>
-      </div>
-    </div>
-
-    <div class="change-grid">
-      <div class="card prose-card">
-        <p>
-          The user should not have to stop working just to explain context to a model. In Cursivis,
-          the selection already carries that context. Logitech hardware provides the deliberate
-          trigger. Cursivis bridges those two moments and returns the most relevant next step.
-        </p>
-        <p>
-          That means the same physical action can produce completely different outcomes depending
-          on what is selected: a dense article becomes a summary, foreign text becomes a
-          translation, broken code becomes a debugging flow, and a live browser task can continue
-          through <strong>Take Action</strong>.
-        </p>
-      </div>
-
-      <div class="card context-card">
-        <div class="card-title-row">
-          <h3>Context in practice</h3>
-          <span class="mini-label">Selection-driven</span>
-        </div>
-        <div class="context-list">
-          <div class="context-row"><span>Long article</span><strong>Summary</strong></div>
-          <div class="context-row"><span>Foreign text</span><strong>Translation</strong></div>
-          <div class="context-row"><span>Selected code</span><strong>Explanation or debugging</strong></div>
-          <div class="context-row"><span>Image region</span><strong>OCR or description</strong></div>
-          <div class="context-row"><span>Browser task</span><strong>Planned execution</strong></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mode-strip" aria-label="Core Cursivis modes">
-      <article class="mode-tile">
-        <h3>Smart Mode</h3>
-        <p>Auto-picks the best action for the current selection.</p>
-      </article>
-      <article class="mode-tile">
-        <h3>Guided Mode</h3>
-        <p>Presents context-aware options navigable through Logitech controls.</p>
-      </article>
-      <article class="mode-tile">
-        <h3>Talk / Text</h3>
-        <p>Adds voice or typed refinement beside the orb.</p>
-      </article>
-      <article class="mode-tile">
-        <h3>Snip-it</h3>
-        <p>Handles OCR, image understanding, and color capture.</p>
-      </article>
-      <article class="mode-tile">
-        <h3>Take Action</h3>
-        <p>Converts results into live browser follow-through.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- ── 03 PITCH + DEMO ── -->
-  <section class="section reveal">
-    <div class="section-head">
-      <span class="section-index">03</span>
-      <div>
-        <p class="section-kicker">Pitch + Demo</p>
-        <h2>See the system in motion</h2>
-        <p class="section-intro">
-          The idea video explains the interaction shift. The audio pitch narrates the full concept.
-        </p>
-      </div>
-    </div>
-
-    <div class="media-grid">
-      <article class="card media-card">
-        <div class="media-copy">
-          <p class="media-label">Idea video</p>
-          <h3>Why the cursor needed an upgrade</h3>
-          <p>
-            The problem framing: AI is powerful, but the current interaction model still interrupts
-            focus and pushes users out of flow.
-          </p>
-          <a class="primary-link" href="https://www.youtube.com/watch?v=X0umA5t0hl0" target="_blank" rel="noreferrer">Watch on YouTube</a>
-        </div>
-        <iframe
-          class="yt-embed"
-          src="https://www.youtube.com/embed/X0umA5t0hl0?rel=0"
-          title="Cursivis Pitch Video"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
-      </article>
-
-      <article class="card media-card">
-        <div class="media-copy">
-          <p class="media-label accent">Audio Pitch</p>
-          <h3>Listen to the narration</h3>
-          <p>
-            A full audio walkthrough of the Cursivis concept, interaction model, and why it fits
-            naturally into the Logitech MX ecosystem.
-          </p>
-        </div>
-        <audio controls style="width:100%; margin-top: auto;">
-          <source src="Cursivis-ByUnknownGod.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-      </article>
-    </div>
-  </section>
-
-  <!-- ── 04 RESPONSE LAYER ── -->
-  <section class="section reveal">
-    <div class="section-head">
-      <span class="section-index">04</span>
-      <div>
-        <p class="section-kicker">Response Layer</p>
-        <h2>How the system responds to context</h2>
-        <p class="section-intro">The interaction stays constant. The output changes with the selection.</p>
-      </div>
-    </div>
-
-    <div class="response-grid">
-      <article class="card response-card">
-        <div class="img-placeholder"><div class="img-placeholder-icon"></div></div>
-        <div class="response-copy">
-          <h3>Summarize and translate</h3>
-          <p>Long passages and foreign-language text become useful output without opening another assistant.</p>
-        </div>
-      </article>
-      <article class="card response-card">
-        <div class="img-placeholder"><div class="img-placeholder-icon"></div></div>
-        <div class="response-copy">
-          <h3>Explain and debug code</h3>
-          <p>The same trigger can explain logic, find problems, and move toward a repair flow.</p>
-        </div>
-      </article>
-      <article class="card response-card">
-        <div class="img-placeholder"><div class="img-placeholder-icon"></div></div>
-        <div class="response-copy">
-          <h3>Read visual content</h3>
-          <p>Snip-it extends the workflow into OCR, image description, and color capture.</p>
-        </div>
-      </article>
-      <article class="card response-card">
-        <div class="img-placeholder"><div class="img-placeholder-icon"></div></div>
-        <div class="response-copy">
-          <h3>Execute the next step</h3>
-          <p>Take Action turns generated output into structured browser execution for real workflows.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- ── 05 WORKFLOW ── -->
-  <section class="section reveal">
-    <div class="section-head">
-      <span class="section-index">05</span>
-      <div>
-        <p class="section-kicker">Workflow</p>
-        <h2>Workflow at a glance</h2>
-        <p class="section-intro">Select, trigger, understand, return the result, and optionally act.</p>
-      </div>
-    </div>
-
-    <div class="card workflow-card">
-      <div class="workflow-step">
-        <span class="workflow-step-number">01</span>
-        <h3>Select</h3>
-        <p>Choose live context: text, code, image, form, or email.</p>
-      </div>
-      <div class="workflow-arrow">→</div>
-      <div class="workflow-step">
-        <span class="workflow-step-number">02</span>
-        <h3>Trigger</h3>
-        <p>Use MX Master, Actions Ring, or MX Creative Console.</p>
-      </div>
-      <div class="workflow-arrow">→</div>
-      <div class="workflow-step">
-        <span class="workflow-step-number">03</span>
-        <h3>Understand</h3>
-        <p>Cursivis captures context and routes the task.</p>
-      </div>
-      <div class="workflow-arrow">→</div>
-      <div class="workflow-step">
-        <span class="workflow-step-number">04</span>
-        <h3>Return Result</h3>
-        <p>Smart Mode or Guided Mode returns the right response.</p>
-      </div>
-      <div class="workflow-arrow">→</div>
-      <div class="workflow-step emphasis">
-        <span class="workflow-step-number">05</span>
-        <h3>Act</h3>
-        <p>Insert, refine, or execute the next browser step through Take Action.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 06 ARCHITECTURE ── -->
-  <section class="section reveal">
-    <div class="section-head">
-      <span class="section-index">06</span>
-      <div>
-        <p class="section-kicker">Technical Stack</p>
-        <h2>System architecture</h2>
-        <p class="section-intro">
-          A local-first stack where hardware input, orchestration, reasoning, execution, and feedback remain tightly aligned.
-        </p>
-      </div>
-    </div>
-
-    <div class="card architecture-card">
-      <div class="architecture-hardware">
-        <span class="mini-label">Hardware input</span>
-        <h3>MX Master 4 · MX Creative Console · Actions Ring</h3>
-        <p>Physical trigger surfaces that express deliberate user intent.</p>
-      </div>
-
-      <div class="architecture-grid">
-        <article class="architecture-tile">
-          <span class="mini-label">Plugin layer</span>
-          <h3>Logitech plugin</h3>
-          <p>C# + Logi Actions SDK</p>
-          <ul>
-            <li>hardware mapping</li>
-            <li>shared IPC</li>
-            <li>haptic event bridge</li>
-          </ul>
-        </article>
-        <article class="architecture-tile">
-          <span class="mini-label">Companion layer</span>
-          <h3>Cursivis companion</h3>
-          <p>C# + WPF orchestration</p>
-          <ul>
-            <li>selection capture</li>
-            <li>orb + AI box UI</li>
-            <li>Smart / Guided / Talk / Snip-it</li>
-          </ul>
-        </article>
-        <article class="architecture-tile">
-          <span class="mini-label">Reasoning layer</span>
-          <h3>LLM backend</h3>
-          <p>Context understanding + planning</p>
-          <ul>
-            <li>text, image, voice routing</li>
-            <li>structured browser plans</li>
-            <li>fallback API key pool</li>
-          </ul>
-        </article>
-        <article class="architecture-tile">
-          <span class="mini-label">Execution layer</span>
-          <h3>Browser action layer</h3>
-          <p>Live browser execution</p>
-          <ul>
-            <li>Chromium extension</li>
-            <li>browser action agent</li>
-            <li>native host / fallback</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="architecture-footer">
-        <div class="footer-pill">Result panel</div>
-        <div class="footer-pill">Browser follow-through</div>
-        <div class="footer-pill">Haptics + hardware feedback</div>
-        <div class="footer-pill">Local-first coordination</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 07 HARDWARE ADVANTAGE ── -->
-  <section class="section reveal">
-    <div class="section-head">
-      <span class="section-index">07</span>
-      <div>
-        <p class="section-kicker">Hardware Advantage</p>
-        <h2>Why Logitech MX makes this feel native</h2>
-        <p class="section-intro">
-          Logitech does not just launch the workflow. It gives Cursivis the physical language of intent.
-        </p>
-      </div>
-    </div>
-
-    <div class="hardware-layout">
-      <div class="card prose-card">
-        <p>
-          Cursivis works because Logitech MX devices provide the exact ingredients this interaction
-          model needs: precise pointing for context selection, programmable triggers for deliberate
-          intent, the Actions Ring for layered access, and the horizontal thumb wheel for fast
-          Guided Mode navigation without breaking focus.
-        </p>
-        <p>
-          Haptics complete that loop. Instead of relying only on on-screen feedback, Cursivis can
-          confirm change, execution, and completion through tactile signals on the device itself.
-          That makes the workflow feel faster, more grounded, and more premium.
-        </p>
-      </div>
-
-      <div class="hardware-feature-grid">
-        <article class="hardware-feature">
-          <span class="mini-label">Pointing</span>
-          <h3>Precise selection</h3>
-          <p>The cursor becomes the capture point for text, visuals, UI, and live browser context.</p>
-        </article>
-        <article class="hardware-feature">
-          <span class="mini-label">Control</span>
-          <h3>Trigger + thumb wheel</h3>
-          <p>Deliberate buttons and the horizontal wheel make Guided Mode feel hardware-native.</p>
-        </article>
-        <article class="hardware-feature">
-          <span class="mini-label">Layering</span>
-          <h3>Actions Ring access</h3>
-          <p>Nested actions provide fast reach into Trigger, Talk, Snip-it, Take Action, and Settings.</p>
-        </article>
-        <article class="hardware-feature">
-          <span class="mini-label">Feedback</span>
-          <h3>Haptics</h3>
-          <p>Tactile feedback confirms action change, execution, and completion without stealing visual attention.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-<script>
-  // Cursor glow
-  document.addEventListener('mousemove', e => {
-    document.body.style.setProperty('--mx', e.clientX + 'px');
-    document.body.style.setProperty('--my', e.clientY + 'px');
-  });
-
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-  }, { threshold: 0.08 });
-  reveals.forEach(el => observer.observe(el));
-
-  // Click sparks
-  const canvas = document.createElement('canvas');
-  canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9998;';
-  document.body.appendChild(canvas);
-  const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
-
-  let sparks = [];
-  document.addEventListener('click', e => {
-    for (let i = 0; i < 8; i++) {
-      sparks.push({ x: e.clientX, y: e.clientY, angle: (Math.PI * 2 * i) / 8, start: performance.now() });
-    }
-  });
-
-  function drawSparks(ts) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    sparks = sparks.filter(s => {
-      const t = (ts - s.start) / 400;
-      if (t >= 1) return false;
-      const ease = t * (2 - t);
-      const dist = ease * 30;
-      const len = 10 * (1 - ease);
-      const x1 = s.x + dist * Math.cos(s.angle);
-      const y1 = s.y + dist * Math.sin(s.angle);
-      const x2 = s.x + (dist + len) * Math.cos(s.angle);
-      const y2 = s.y + (dist + len) * Math.sin(s.angle);
-      ctx.strokeStyle = `rgba(167,139,250,${1 - t})`;
-      ctx.lineWidth = 1.5;
-      ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
-      return true;
-    });
-    requestAnimationFrame(drawSparks);
-  }
-  requestAnimationFrame(drawSparks);
-</script>
-
 </body>
 </html>
