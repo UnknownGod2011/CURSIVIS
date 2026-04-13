@@ -126,18 +126,19 @@ a {
 }
 
 .hero-promise {
-    max-width: 700px;
+    max-width: 860px;
     margin: 10px auto 0;
-    font-size: 0.98rem;
+    font-size: clamp(0.93rem, 1.35vw, 0.98rem);
     font-weight: 700;
     line-height: 1.5;
     color: var(--ink-soft);
+    white-space: nowrap;
 }
 
 .hero-mouse {
     width: clamp(66px, 6vw, 84px);
     height: auto;
-    margin-left: -2px;
+    margin-left: 4px;
     position: relative;
     top: 6px;
     filter: drop-shadow(0 10px 14px rgba(10, 20, 36, 0.16));
@@ -814,6 +815,10 @@ strong {
 
     .descriptor {
         font-size: 1.08rem;
+    }
+
+    .hero-promise {
+        white-space: normal;
     }
 
     .hero-proof {
